@@ -1,0 +1,2 @@
+# MongoUI
+MongoDB Admin UI
