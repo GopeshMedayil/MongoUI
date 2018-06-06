@@ -18,7 +18,7 @@ mongoose.connection.once('open', function() {
   console.log('COnnected');
 });
 
-app.use(['/', '/login'], loginRoutes);
+app.use('/', loginRoutes);
 
 // app.use('/', loginRoutes);
 
