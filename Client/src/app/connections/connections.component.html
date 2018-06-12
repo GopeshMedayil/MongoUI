@@ -1,19 +1,13 @@
 <div class="container">
   <div id="top">
     <span id="buttons">
-      <button mat-button class="btn-primary" mat-raised-button color="primary">Add Connection</button>
+      <button mat-button class="btn-primary" mat-raised-button color="primary" (click)="openAddConnectionModal()">Add Connection</button>
     </span>
     <span id="title">
       <h1 class="mat-headline">Connections</h1>
     </span>
   </div>
-  <!-- <div class="toolbar">
-    <div style="width:80%;">Connections</div>
-    <div style="width:80%;" class="right">
-      <button mat-button class="btn-primary" mat-raised-button color="primary">Add Connection</button>
 
-    </div>
-  </div> -->
 
   <mat-list role="list" style="margin-top:20px">
     <mat-list-item>
@@ -21,9 +15,13 @@
 
         <mat-card-subtitle>Connection 1</mat-card-subtitle>
         <span class="spacer"></span>
-        <button mat-icon-button style="top:-12px">
+        <button mat-icon-button [matMenuTriggerFor]="menu" style="top:-12px">
           <mat-icon>more_vert</mat-icon>
         </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Edit</button>
+          <button mat-menu-item>Delete</button>
+        </mat-menu>
       </mat-card>
     </mat-list-item>
     <mat-list-item>

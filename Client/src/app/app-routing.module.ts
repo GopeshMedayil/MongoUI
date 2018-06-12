@@ -3,6 +3,9 @@ import {RouterModule, Routes} from '@angular/router';
 
 const routes : Routes = [
     {
+        path: '',
+        loadChildren: './connections/connections.module#ConnectionsModule'
+    }, {
         path: 'connections',
         loadChildren: './connections/connections.module#ConnectionsModule'
     }
